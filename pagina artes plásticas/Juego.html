@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Stylesheet/estilo.css" />
+    <link rel="Stylesheet" href="Stylesheet/Style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>ADIVINA EL ARTISTA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: rgb();
+      }
+      .nav1 {
+        background-color: #75cafb;
+        padding: 20px;
+        box-shadow: 2px 2px 2px #888;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active"  href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="caracteristicas.html">Artes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Educación-Artística.html">Educación Artística</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Pensum.html">Pensum</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recursos.html">Recursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Museos.html">Museos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Juego.html">Juego</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--       
+    <nav class="nav1">
+      <button type="button" class="btn btn-light">
+        <a href="index.html">INICIO</a>
+      </button>
+      <button type="button" class="btn btn-dark">
+        <a href="Educación-Artística.html">Educación Artística</a>
+      </button>
+      <button type="button" class="btn btn-success">
+        <a href="funciones.html">FUNCIONES</a>
+      </button>
+      <button type="button" class="btn btn-danger">
+        <a href="recursos.html">RECURSOS</a>
+      </button>
+      <button type="button" class="btn btn-warning">
+        <a href="caracteristicas.html">CARACTERISTICAS</a>
+      </button>
+      <button type="button" class="btn btn-info">
+        <a href="Juego.html">JUEGO</a>
+      </button>
+    </nav> -->
+
+    <h1>ADIVINA EL ARTISTA</h1>
+
+    <!-- Pantalla inicial -->
+    <div id="pantalla-inicial">
+      <p>¿A qué artista pertenece la obra?</p>
+      <button class="btn" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
+    </div>
+
+    <!-- Pantalla juego -->
+    <div class="pantalla-juego" id="pantalla-juego">
+      <img src="" alt="" id="imgBandera" />
+      <div class="opciones">
+        <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+          <div class="letra" id="l0">A</div>
+          <div class="nombre" id="n0">OPCION A</div>
+        </div>
+        <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+          <div class="letra" id="l1">B</div>
+          <div class="nombre" id="n1">OPCION B</div>
+        </div>
+        <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+          <div class="letra" id="l2">C</div>
+          <div class="nombre" id="n2">OPCION C</div>
+        </div>
+      </div>
+    </div>
+    <!-- Pantalla final -->
+    <div id="pantalla-final">
+      <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
+      <h2>INCORRECTAS: <span id="numIncorrectas">2</span></h2>
+      <button class="btn" onclick="volverAlInicio()">VOLVER AL INICIO</button>
+    </div>
+
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
